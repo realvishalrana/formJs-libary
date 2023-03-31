@@ -1,0 +1,160 @@
+:root {
+  --white: #ffffff;
+  --red: #ff0000;
+}
+
+#tableDiv,
+#cricketDiv {
+  display: none;
+}
+
+.tableSection {
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 30px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+ justify-content: space-evenly; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+#employeeForm
+/* ,#cricketForm  */ {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 30px;
+  background: var(--white);
+}
+
+h3,
+h1 {
+  color: var(--white);
+}
+
+h1 {
+  text-align: center;
+}
+
+.allLabel {
+  font-weight: bold;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+  margin-left: 1%;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(161, 186, 250);
+  background: linear-gradient(90deg, rgba(161, 186, 250, 1) 49%, rgba(255, 174, 233, 1) 100%);
+}
+
+.display-btn {
+  display: grid;
+}
+
+.display-inline {
+  margin: 8px 0px;
+}
+
+input:not([type='checkbox']):not([type='radio']) {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #e9e8e8;
+}
+
+select {
+  padding: 5px;
+  margin: 8px 0;
+}
+
+textarea {
+  background-color: #e8f0fe;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: none;
+  resize: none;
+}
+
+input[type='radio'] {
+  background-color: var(--red);
+}
+
+table,
+th,
+td {
+  border: 1px solid #d4d4d4;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.tableSection > * {
+  overflow-x: auto;
+}
+
+th {
+  background-color: #f3f3f3;
+  padding: 12px;
+}
+td {
+  background-color: #fdfdfd;
+  text-align: center;
+  padding: 12px;
+}
+
+.btn {
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  padding: 3px;
+}
+.delete {
+  background-color: var(--red);
+}
+
+.update {
+  /* background-color: rgb(23 140 217); */
+  background-color: rgb(23 140 217);
+  color: white;
+  margin-bottom: 3px;
+}
+
+#btnSubmit {
+  background-color: rgb(23 140 217);
+  color: var(--white);
+}
+
+#btnReset {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-gap: 30px;
+  }
+
+  .tableSection {
+    display: flex;
+    flex-direction: column;
+  }
+}
